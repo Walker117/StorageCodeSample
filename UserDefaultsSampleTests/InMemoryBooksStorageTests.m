@@ -1,5 +1,5 @@
 //
-//  UserDefaultsSampleTests.m
+//  InMemoryBooksStorageTests.m
 //  UserDefaultsSampleTests
 //
 //  Created by Mokretsov, Oleksandr on 3/20/18.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface UserDefaultsSampleTests : XCTestCase
+@interface InMemoryBooksStorageTests : XCTestCase
 
 @end
 
-@implementation UserDefaultsSampleTests
+@implementation InMemoryBooksStorageTests
 
 - (void)setUp {
     [super setUp];

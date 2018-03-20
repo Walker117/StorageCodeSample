@@ -13,7 +13,11 @@
 		5327FADD20615FCE00CAA756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5327FADC20615FCE00CAA756 /* Assets.xcassets */; };
 		5327FAE020615FCE00CAA756 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5327FADE20615FCE00CAA756 /* LaunchScreen.storyboard */; };
 		5327FAE320615FCF00CAA756 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5327FAE220615FCF00CAA756 /* main.m */; };
-		5327FAED20615FCF00CAA756 /* UserDefaultsSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5327FAEC20615FCF00CAA756 /* UserDefaultsSampleTests.m */; };
+		5327FAFE206160C300CAA756 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 5327FAFD206160C300CAA756 /* Book.m */; };
+		5327FB012061619D00CAA756 /* BooksStorageInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 5327FB002061619D00CAA756 /* BooksStorageInterface.m */; };
+		5327FB042061757300CAA756 /* InMemoryBooksStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5327FB032061757300CAA756 /* InMemoryBooksStorage.m */; };
+		5327FB0D2061972C00CAA756 /* UserDefaultsBooksStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5327FB0C2061972C00CAA756 /* UserDefaultsBooksStorage.m */; };
+		5327FB0F2061A40600CAA756 /* InMemoryBooksStorageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5327FB0E2061A40600CAA756 /* InMemoryBooksStorageTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +42,16 @@
 		5327FAE120615FCE00CAA756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5327FAE220615FCF00CAA756 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5327FAE820615FCF00CAA756 /* UserDefaultsSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserDefaultsSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5327FAEC20615FCF00CAA756 /* UserDefaultsSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsSampleTests.m; sourceTree = "<group>"; };
 		5327FAEE20615FCF00CAA756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5327FAFC206160C300CAA756 /* Book.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		5327FAFD206160C300CAA756 /* Book.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
+		5327FAFF2061619D00CAA756 /* BooksStorageInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BooksStorageInterface.h; sourceTree = "<group>"; };
+		5327FB002061619D00CAA756 /* BooksStorageInterface.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BooksStorageInterface.m; sourceTree = "<group>"; };
+		5327FB022061757300CAA756 /* InMemoryBooksStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InMemoryBooksStorage.h; sourceTree = "<group>"; };
+		5327FB032061757300CAA756 /* InMemoryBooksStorage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InMemoryBooksStorage.m; sourceTree = "<group>"; };
+		5327FB0B2061972C00CAA756 /* UserDefaultsBooksStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDefaultsBooksStorage.h; sourceTree = "<group>"; };
+		5327FB0C2061972C00CAA756 /* UserDefaultsBooksStorage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsBooksStorage.m; sourceTree = "<group>"; };
+		5327FB0E2061A40600CAA756 /* InMemoryBooksStorageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InMemoryBooksStorageTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +93,8 @@
 		5327FAD220615FCE00CAA756 /* UserDefaultsSample */ = {
 			isa = PBXGroup;
 			children = (
+				5327FAF720615FF900CAA756 /* Storage */,
+				5327FAF82061601000CAA756 /* Models */,
 				5327FAD320615FCE00CAA756 /* AppDelegate.h */,
 				5327FAD420615FCE00CAA756 /* AppDelegate.m */,
 				5327FAD620615FCE00CAA756 /* ViewController.h */,
@@ -97,10 +111,32 @@
 		5327FAEB20615FCF00CAA756 /* UserDefaultsSampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				5327FAEC20615FCF00CAA756 /* UserDefaultsSampleTests.m */,
+				5327FB0E2061A40600CAA756 /* InMemoryBooksStorageTests.m */,
 				5327FAEE20615FCF00CAA756 /* Info.plist */,
 			);
 			path = UserDefaultsSampleTests;
+			sourceTree = "<group>";
+		};
+		5327FAF720615FF900CAA756 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				5327FAFF2061619D00CAA756 /* BooksStorageInterface.h */,
+				5327FB002061619D00CAA756 /* BooksStorageInterface.m */,
+				5327FB022061757300CAA756 /* InMemoryBooksStorage.h */,
+				5327FB032061757300CAA756 /* InMemoryBooksStorage.m */,
+				5327FB0B2061972C00CAA756 /* UserDefaultsBooksStorage.h */,
+				5327FB0C2061972C00CAA756 /* UserDefaultsBooksStorage.m */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		5327FAF82061601000CAA756 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5327FAFC206160C300CAA756 /* Book.h */,
+				5327FAFD206160C300CAA756 /* Book.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,9 +241,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5327FB0D2061972C00CAA756 /* UserDefaultsBooksStorage.m in Sources */,
+				5327FAFE206160C300CAA756 /* Book.m in Sources */,
 				5327FAD820615FCE00CAA756 /* ViewController.m in Sources */,
+				5327FB042061757300CAA756 /* InMemoryBooksStorage.m in Sources */,
 				5327FAE320615FCF00CAA756 /* main.m in Sources */,
 				5327FAD520615FCE00CAA756 /* AppDelegate.m in Sources */,
+				5327FB012061619D00CAA756 /* BooksStorageInterface.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,7 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5327FAED20615FCF00CAA756 /* UserDefaultsSampleTests.m in Sources */,
+				5327FB0F2061A40600CAA756 /* InMemoryBooksStorageTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
