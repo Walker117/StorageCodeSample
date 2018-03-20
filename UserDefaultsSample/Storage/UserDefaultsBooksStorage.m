@@ -28,7 +28,7 @@
     return self;
 }
 
-- (void)saveBookWithBook:(Book * _Nonnull)newBook {
+- (void)saveBook:(Book * _Nonnull)newBook {
     NSData *newBookData = [self endcodeBook:newBook];
     [self.userDefaults setObject:newBookData forKey:[self bookKeyWithId:newBook.bookId]];
 }

@@ -26,7 +26,7 @@
     return self;
 }
 
-- (void)saveBookWithBook:(Book *)newBook{
+- (void)saveBook:(Book *)newBook{
     self.booksDict[newBook.bookId] = newBook;
 }
 

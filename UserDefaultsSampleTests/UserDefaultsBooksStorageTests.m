@@ -1,5 +1,5 @@
 //
-//  InMemoryBooksStorageTests.m
+//  UserDefaultsBooksStorageTests.m
 //  UserDefaultsSampleTests
 //
 //  Created by Mokretsov, Oleksandr on 3/20/18.
@@ -7,25 +7,29 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "InMemoryBooksStorage.h"
+#import "UserDefaultsBooksStorage.h"
 
-@interface InMemoryBooksStorageTests : XCTestCase
+@interface UserDefaultsBooksStorageTests : XCTestCase
 
-@property(strong, nonatomic) InMemoryBooksStorage *storage;
+@property(strong, nonatomic) UserDefaultsBooksStorage *storage;
 
 @end
 
-@implementation InMemoryBooksStorageTests
+@implementation UserDefaultsBooksStorageTests
 
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    [self resetDefaults];
     
-    self.storage = [[InMemoryBooksStorage alloc]init];
+    self.storage = [[UserDefaultsBooksStorage alloc]init];
 }
 
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    [self resetDefaults];
+    
     [super tearDown];
 }
 
@@ -54,6 +58,17 @@
     [self.storage saveBook:book1];
     allBooks = [self.storage getAllBooks];
     XCTAssertEqual(allBooks.count, 2, "Books count doesn't match");
+}
+
+#pragma mark - Helpers
+
+- (void)resetDefaults {
+    NSUserDefaults * defs = [NSUserDefaults standardUserDefaults];
+    NSDictionary * dict = [defs dictionaryRepresentation];
+    for (id key in dict) {
+        [defs removeObjectForKey:key];
+    }
+    [defs synchronize];
 }
 
 @end

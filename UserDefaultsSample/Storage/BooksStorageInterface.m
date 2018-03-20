@@ -10,32 +10,32 @@
 
 @interface BooksStorageInterface ()
 
-@property (nonatomic, strong) id<BooksStorageProtocol> storage;
+@property (nonatomic, strong) id<BooksStorageProtocol> storageManager;
 
 @end
 
 @implementation BooksStorageInterface
 
-- (instancetype _Nullable)initWithStorage:(id<BooksStorageProtocol> _Nonnull)storage {
+- (instancetype _Nullable)initWithStorageManager:(id<BooksStorageProtocol> _Nonnull)storageManager {
     self = [super init];
     
     if (self){
-        self.storage = storage;
+        self.storageManager = storageManager;
     }
     
     return self;
 }
 
-- (void)saveBookWithBook:(Book *)newBook{
-    [self.storage saveBookWithBook:newBook];
+- (void)saveBook:(Book *)newBook{
+    [self.storageManager saveBook:newBook];
 }
 
 - (NSArray<Book *> *)getAllBooks{
-    return [self.storage getAllBooks];
+    return [self.storageManager getAllBooks];
 }
 
 - (Book * _Nullable)findBookById:(NSString *)bookId{
-    return [self.storage findBookById:bookId];
+    return [self.storageManager findBookById:bookId];
 }
 
 @end

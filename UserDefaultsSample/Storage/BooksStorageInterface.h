@@ -11,7 +11,7 @@
 
 @protocol BooksStorageProtocol
 
-- (void)saveBookWithBook:(Book * _Nonnull)newBook;
+- (void)saveBook:(Book * _Nonnull)newBook;
 - (NSArray<Book *> * _Nonnull)getAllBooks;
 - (Book * _Nullable)findBookById:(NSString *_Nonnull)bookId;
 
@@ -19,6 +19,6 @@
 
 @interface BooksStorageInterface : NSObject <BooksStorageProtocol>
 
-- (instancetype _Nullable)initWithStorage:(id<BooksStorageProtocol> _Nonnull)storage;
+- (instancetype _Nullable)initWithStorageManager:(id<BooksStorageProtocol> _Nonnull)storageManager;
 
 @end

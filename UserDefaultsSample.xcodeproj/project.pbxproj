@@ -18,6 +18,7 @@
 		5327FB042061757300CAA756 /* InMemoryBooksStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5327FB032061757300CAA756 /* InMemoryBooksStorage.m */; };
 		5327FB0D2061972C00CAA756 /* UserDefaultsBooksStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5327FB0C2061972C00CAA756 /* UserDefaultsBooksStorage.m */; };
 		5327FB0F2061A40600CAA756 /* InMemoryBooksStorageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5327FB0E2061A40600CAA756 /* InMemoryBooksStorageTests.m */; };
+		5327FB232061AAC300CAA756 /* UserDefaultsBooksStorageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5327FB222061AAC300CAA756 /* UserDefaultsBooksStorageTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		5327FB0B2061972C00CAA756 /* UserDefaultsBooksStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDefaultsBooksStorage.h; sourceTree = "<group>"; };
 		5327FB0C2061972C00CAA756 /* UserDefaultsBooksStorage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsBooksStorage.m; sourceTree = "<group>"; };
 		5327FB0E2061A40600CAA756 /* InMemoryBooksStorageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InMemoryBooksStorageTests.m; sourceTree = "<group>"; };
+		5327FB222061AAC300CAA756 /* UserDefaultsBooksStorageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsBooksStorageTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				5327FB0E2061A40600CAA756 /* InMemoryBooksStorageTests.m */,
+				5327FB222061AAC300CAA756 /* UserDefaultsBooksStorageTests.m */,
 				5327FAEE20615FCF00CAA756 /* Info.plist */,
 			);
 			path = UserDefaultsSampleTests;
@@ -256,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5327FB0F2061A40600CAA756 /* InMemoryBooksStorageTests.m in Sources */,
+				5327FB232061AAC300CAA756 /* UserDefaultsBooksStorageTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
