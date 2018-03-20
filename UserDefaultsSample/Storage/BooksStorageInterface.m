@@ -7,6 +7,7 @@
 //
 
 #import "BooksStorageInterface.h"
+#import "InMemoryBooksStorage.h"
 
 @interface BooksStorageInterface ()
 
@@ -15,6 +16,16 @@
 @end
 
 @implementation BooksStorageInterface
+
+- (instancetype)init {
+    self = [super init];
+    
+    if (self){
+        self.storageManager = [[InMemoryBooksStorage alloc]init];
+    }
+    
+    return self;
+}
 
 - (instancetype _Nullable)initWithStorageManager:(id<BooksStorageProtocol> _Nonnull)storageManager {
     self = [super init];

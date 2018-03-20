@@ -41,8 +41,8 @@
     
     Book *loadedBook = [self.storage findBookById:book.bookId];
     XCTAssertNotNil(loadedBook, @"Book shouldn't be nil");
-    XCTAssertEqual(book.bookId, loadedBook.bookId, @"BookId should match");
-    XCTAssertEqual(book.name, loadedBook.name, @"Book name should match");
+    XCTAssertTrue([book.bookId isEqualToString:loadedBook.bookId],@"BookIds should match");
+    XCTAssertTrue([book.name isEqualToString:loadedBook.name],@"Book names should match");
 }
 
 - (void)testAllBooks {

@@ -34,7 +34,7 @@
 }
 
 - (NSArray<Book *> * _Nonnull)getAllBooks {
-    NSMutableArray<Book *> *allBooks = [NSMutableArray new];
+    NSMutableArray *allBooks = [NSMutableArray new];
     
     for (NSString *key in [self allBookKeys]){
         NSData *bookData = [self.userDefaults objectForKey:key];
@@ -69,8 +69,7 @@
 - (NSArray<NSString *> *)allBookKeys {
     NSArray *keys = self.userDefaults.dictionaryRepresentation.allKeys;
     
-    NSString* filter = @"%K CONTAINS %@";
-    NSPredicate* predicate = [NSPredicate predicateWithFormat:filter, @"SELF", self.storageNameSpacePrefix];
+    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"SELF CONTAINS[cd] %@", self.storageNameSpacePrefix];
     NSArray* filteredKeys = [keys filteredArrayUsingPredicate:predicate];
     
     return  filteredKeys;

@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5327FAD520615FCE00CAA756 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5327FAD420615FCE00CAA756 /* AppDelegate.m */; };
-		5327FAD820615FCE00CAA756 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5327FAD720615FCE00CAA756 /* ViewController.m */; };
-		5327FADB20615FCE00CAA756 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5327FAD920615FCE00CAA756 /* Main.storyboard */; };
-		5327FADD20615FCE00CAA756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5327FADC20615FCE00CAA756 /* Assets.xcassets */; };
-		5327FAE020615FCE00CAA756 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5327FADE20615FCE00CAA756 /* LaunchScreen.storyboard */; };
 		5327FAE320615FCF00CAA756 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5327FAE220615FCF00CAA756 /* main.m */; };
 		5327FAFE206160C300CAA756 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 5327FAFD206160C300CAA756 /* Book.m */; };
 		5327FB012061619D00CAA756 /* BooksStorageInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 5327FB002061619D00CAA756 /* BooksStorageInterface.m */; };
@@ -19,6 +14,8 @@
 		5327FB0D2061972C00CAA756 /* UserDefaultsBooksStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5327FB0C2061972C00CAA756 /* UserDefaultsBooksStorage.m */; };
 		5327FB0F2061A40600CAA756 /* InMemoryBooksStorageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5327FB0E2061A40600CAA756 /* InMemoryBooksStorageTests.m */; };
 		5327FB232061AAC300CAA756 /* UserDefaultsBooksStorageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5327FB222061AAC300CAA756 /* UserDefaultsBooksStorageTests.m */; };
+		5327FB252061C5CD00CAA756 /* BooksStorageInterfaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5327FB242061C5CD00CAA756 /* BooksStorageInterfaceTests.m */; };
+		5327FB282061C61F00CAA756 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5327FB262061C61F00CAA756 /* AppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,13 +30,6 @@
 
 /* Begin PBXFileReference section */
 		5327FAD020615FCE00CAA756 /* UserDefaultsSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserDefaultsSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5327FAD320615FCE00CAA756 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		5327FAD420615FCE00CAA756 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5327FAD620615FCE00CAA756 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5327FAD720615FCE00CAA756 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5327FADA20615FCE00CAA756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5327FADC20615FCE00CAA756 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5327FADF20615FCE00CAA756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5327FAE120615FCE00CAA756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5327FAE220615FCF00CAA756 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5327FAE820615FCF00CAA756 /* UserDefaultsSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserDefaultsSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +44,9 @@
 		5327FB0C2061972C00CAA756 /* UserDefaultsBooksStorage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsBooksStorage.m; sourceTree = "<group>"; };
 		5327FB0E2061A40600CAA756 /* InMemoryBooksStorageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InMemoryBooksStorageTests.m; sourceTree = "<group>"; };
 		5327FB222061AAC300CAA756 /* UserDefaultsBooksStorageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsBooksStorageTests.m; sourceTree = "<group>"; };
+		5327FB242061C5CD00CAA756 /* BooksStorageInterfaceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BooksStorageInterfaceTests.m; sourceTree = "<group>"; };
+		5327FB262061C61F00CAA756 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5327FB272061C61F00CAA756 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,13 +90,8 @@
 			children = (
 				5327FAF720615FF900CAA756 /* Storage */,
 				5327FAF82061601000CAA756 /* Models */,
-				5327FAD320615FCE00CAA756 /* AppDelegate.h */,
-				5327FAD420615FCE00CAA756 /* AppDelegate.m */,
-				5327FAD620615FCE00CAA756 /* ViewController.h */,
-				5327FAD720615FCE00CAA756 /* ViewController.m */,
-				5327FAD920615FCE00CAA756 /* Main.storyboard */,
-				5327FADC20615FCE00CAA756 /* Assets.xcassets */,
-				5327FADE20615FCE00CAA756 /* LaunchScreen.storyboard */,
+				5327FB272061C61F00CAA756 /* AppDelegate.h */,
+				5327FB262061C61F00CAA756 /* AppDelegate.m */,
 				5327FAE120615FCE00CAA756 /* Info.plist */,
 				5327FAE220615FCF00CAA756 /* main.m */,
 			);
@@ -115,6 +103,7 @@
 			children = (
 				5327FB0E2061A40600CAA756 /* InMemoryBooksStorageTests.m */,
 				5327FB222061AAC300CAA756 /* UserDefaultsBooksStorageTests.m */,
+				5327FB242061C5CD00CAA756 /* BooksStorageInterfaceTests.m */,
 				5327FAEE20615FCF00CAA756 /* Info.plist */,
 			);
 			path = UserDefaultsSampleTests;
@@ -224,9 +213,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5327FAE020615FCE00CAA756 /* LaunchScreen.storyboard in Resources */,
-				5327FADD20615FCE00CAA756 /* Assets.xcassets in Resources */,
-				5327FADB20615FCE00CAA756 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,10 +232,9 @@
 			files = (
 				5327FB0D2061972C00CAA756 /* UserDefaultsBooksStorage.m in Sources */,
 				5327FAFE206160C300CAA756 /* Book.m in Sources */,
-				5327FAD820615FCE00CAA756 /* ViewController.m in Sources */,
+				5327FB282061C61F00CAA756 /* AppDelegate.m in Sources */,
 				5327FB042061757300CAA756 /* InMemoryBooksStorage.m in Sources */,
 				5327FAE320615FCF00CAA756 /* main.m in Sources */,
-				5327FAD520615FCE00CAA756 /* AppDelegate.m in Sources */,
 				5327FB012061619D00CAA756 /* BooksStorageInterface.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5327FB0F2061A40600CAA756 /* InMemoryBooksStorageTests.m in Sources */,
+				5327FB252061C5CD00CAA756 /* BooksStorageInterfaceTests.m in Sources */,
 				5327FB232061AAC300CAA756 /* UserDefaultsBooksStorageTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,25 +258,6 @@
 			targetProxy = 5327FAE920615FCF00CAA756 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		5327FAD920615FCE00CAA756 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5327FADA20615FCE00CAA756 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5327FADE20615FCE00CAA756 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5327FADF20615FCE00CAA756 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5327FAEF20615FCF00CAA756 /* Debug */ = {

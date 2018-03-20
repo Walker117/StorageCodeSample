@@ -17,6 +17,9 @@
 
 @end
 
+/*
+ BooksStorageInterface is used as abstracted storage layer where we can swap underlying persistence mechanics when needed. So if we switch from in memory storage to user defaults storage, for our application nothing really changes - it accesses the data the same way as before because we clearly defined interface for that.
+ */
 @interface BooksStorageInterface : NSObject <BooksStorageProtocol>
 
 - (instancetype _Nullable)initWithStorageManager:(id<BooksStorageProtocol> _Nonnull)storageManager;
