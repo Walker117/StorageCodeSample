@@ -22,6 +22,6 @@
  */
 @interface BooksStorageInterface : NSObject <BooksStorageProtocol>
 
-- (instancetype _Nullable)initWithStorageManager:(id<BooksStorageProtocol> _Nonnull)storageManager;
+- (instancetype _Nonnull)initWithStorageManager:(id<BooksStorageProtocol> _Nonnull)storageManager;
 
 @end

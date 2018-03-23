@@ -27,7 +27,7 @@
     return self;
 }
 
-- (instancetype _Nullable)initWithStorageManager:(id<BooksStorageProtocol> _Nonnull)storageManager {
+- (instancetype _Nonnull)initWithStorageManager:(id<BooksStorageProtocol> _Nonnull)storageManager {
     self = [super init];
     
     if (self){

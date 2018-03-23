@@ -9,6 +9,16 @@
 #import <XCTest/XCTest.h>
 #import "UserDefaultsBooksStorage.h"
 
+@interface UserDefaultsBooksStorage (Testing)
+
+@property (copy, nonatomic) NSString *storageNameSpacePrefix;
+
+- (Book *)decodeToBook:(NSData *)data;
+- (NSData *)endcodeBook:(Book *)book;
+- (NSString *)bookKeyWithId:(NSString *)bookId;
+
+@end
+
 @interface UserDefaultsBooksStorageTests : XCTestCase
 
 @property(strong, nonatomic) UserDefaultsBooksStorage *storage;
@@ -60,13 +70,42 @@
     XCTAssertEqual(allBooks.count, 2, "Books count doesn't match");
 }
 
+- (void)testEncodeBook {
+    Book *book = [[Book alloc]initWithId:@"id" andName:@"name"];
+    NSData *data = [self.storage endcodeBook:book];
+    XCTAssertNotNil(data);
+}
+
+- (void)testDecodeBook {
+    NSData *data = [NSData data];
+    Book *decodedBook = [self.storage decodeToBook:data];
+    XCTAssertNil(decodedBook);
+    
+    Book *book = [[Book alloc]initWithId:@"id" andName:@"name"];
+    data = [self.storage endcodeBook:book];
+    decodedBook = [self.storage decodeToBook:data];
+    XCTAssertNotNil(decodedBook);
+    XCTAssertTrue([decodedBook isKindOfClass:[Book class]]);
+}
+
+- (void)testBookKeyWithId {
+    NSString *bookId = @"id";
+    NSString *key = [self.storage bookKeyWithId:bookId];
+    XCTAssertTrue([key hasSuffix:bookId]);
+    NSString *fullStr = [NSString stringWithFormat:@"%@%@", self.storage.storageNameSpacePrefix,bookId];
+    XCTAssertTrue([key isEqualToString: fullStr]);
+}
+
 #pragma mark - Helpers
 
 - (void)resetDefaults {
     NSUserDefaults * defs = [NSUserDefaults standardUserDefaults];
     NSDictionary * dict = [defs dictionaryRepresentation];
-    for (id key in dict) {
-        [defs removeObjectForKey:key];
+    UserDefaultsBooksStorage *storage = [[UserDefaultsBooksStorage alloc]init];
+    for (NSString *key in dict) {
+        if ([key hasPrefix: storage.storageNameSpacePrefix]){
+            [defs removeObjectForKey:key];
+        }
     }
     [defs synchronize];
 }
